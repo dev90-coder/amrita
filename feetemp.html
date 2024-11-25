@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       img { width: 100%; height:100%}
+        .fees{
+            height:500px;
+            width:100%;
+            bordeR:2px solid coral;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .f1{
+            height:450px;
+            width:20%;
+            border:10px solid coral;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        #status{
+            font-size: 20px;
+        }
+        table{
+            margin-bottom: 20px;
+        }
+        .bt1, .bt2, .bt3{
+            height:30px;
+            width:150px;
+            border:2px solid rgb(11, 138, 91);
+            background-color: rgb(11, 138, 91);
+            border-radius: 10px;
+            margin-left: 10%;
+            font-size: 20px;
+            text-align: center;
+            display:none;
+
+        }
+    </style>
+</head>
+<body>
+    {% for i in data %}
+<table border>
+    
+    <tr>
+
+        <td rowspan="4">
+            <img src=" {{ i.image }}" style="height:100px;width:100px">
+        </td>
+    </tr>
+    <tR>
+    <td>Name: {{ i.student }} </td>
+    <td>Father's Name:  {{ i.father }} </td>
+    <td>Mother's Name:  {{ i.mother }} </td>
+    </tR>
+    <tr>
+        <td>Addmission number:  {{ i.addmission }} </td>
+        <td>Mobile number:  {{ i.phone }}  </td>
+        <td>Email:   {{ i.email }}</td>
+    </tr>
+    <tr>
+        <td colspan="2">Class:  {{ i.classes }} </td>
+        <td>D.O.B.  {{ i.dob }}</td>
+    </tr>
+</table>    
+
+<div class="fees">
+    <div class="f1">
+<h1>Ist installment</h1>
+<h2>3 Months</h2>
+<h3>April to June</h3>
+<h4>₹ 10,500</h4>
+<p id="status1"> {{ i.install_1 }} </p>
+<button class="bt1">Pay now</button>
+    </div>
+
+
+<div class="f1">
+        <h1>IInd installment</h1>
+        <h2>3 Months</h2>
+        <h3> July to September</h3>
+        <h4>₹ 10,000</h4>
+        <p id="status2"> {{ i.install_2 }} </p>
+        <button class="bt2">Pay now</button>
+            </div>
+<div class="f1">
+                <h1>IIIrd installment</h1>
+                <h2>3 Months</h2>
+                <h3>October to February</h3>
+                <h4>₹ 12,000</h4>
+                <p id="status3"> {{ i.install_3 }}</p>
+                <button class="bt3">Pay now</button>
+</div>
+
+
+</div>
+
+
+{% endfor %}
+</body>
+<script>
+
+var st1 = document.querySelector("#status1")
+
+var st2 = document.querySelector("#status2")
+var st3 = document.querySelector("#status3")
+
+var bt1= document.querySelector('.bt1')
+var bt2= document.querySelector('.bt2')
+var bt3= document.querySelector('.bt3')
+
+
+
+if (st1.innerText =='not paid'){bt1.style.display='block'}
+if (st2.innerText =='not paid'){bt2.style.display='block'}
+if (st3.innerText =='not paid'){bt3.style.display='block'}
+
+
+</script>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student's corner</title>
+    <link href="nav.css" rel="stylesheet">
+    <link href="footer.css" rel="stylesheet">
+    <link href="common.css" rel="stylesheet">
+    <style>
+
+        .main_panel{
+            height:650px;
+            width:100%;
+            display: flex;
+            margin-top:10px
+          
+        }
+        .panel{
+            height:100%;
+            width:20%;
+            background-color:rgb(11, 138, 91);
+            display:flex;
+            align-items:center;
+            
+            flex-direction: column;
+
+        }
+        .panel a{
+            color:white;
+            font-size:20px;
+            text-decoration: none;
+            margin-top:10px;
+
+        }
+
+        .panel a:hover{
+            color:coral;
+            border-bottom:1px solid rgb(255, 0, 204);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="time">
+        <p id="times">Time here<p>
+    </div>
+    <h1 style="text-align: center;margin-top:10px">AMRITA PUBLIC SCHOOL</h1>   
+    <div class="logo">
+        <img src="log.png">
+        
+       </div>
+       <div class="social">
+        <div class="face">F</div>
+        <div class="goggle">G</div>
+    </div>
+    <div class="nav">
+        <span class="nav_a"><a href="index">Home</a></span>
+        <span class="nav_a"><a href="gallery">Gallery</a></span>
+        <span class="nav_a"><a href="corner">Student Corner</a></span>
+        <span class="nav_a"><a href="suggestions">Suggestions</a></span>
+        <span class="nav_a"><a href="about">About us</a></span>
+        <span class="nav_a"><a href="contact">Contact us</a></span>
+    </div>
+<div class="main_panel">
+<div class="panel">
+    <a href="details" target="frame">Student's details</a>
+   <a href="registration" target="frame">Registartion form</a>
+   <a href="fees" target="frame">Pay Fees</a>
+</div>
+<iframe name="frame" id="frame" src="option">
+
+</iframe>
+</div>
+<div class="footer">
+    <div class="master_box1">
+        <div class="box1">
+    <h1>Amrita Public school</h1>
+    
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil beatae dolore soluta! Maxime aliquid nostrum sequi, odit temporibus eligendi illo ipsa placeat sint deleniti ex facilis. Autem debitis rerum perferendis.
+    </p>
+        </div>
+    <div class="box2">
+        <h2>Office</h2><br>
+        <p>Harraiya-Basti road</p><br>
+        <p>Hariaya, Uttar pradesh</p><br>
+        <p>Pin: 272155</p><br>
+        <p>India</p><br>
+        <a href="mailto:amrita_34@gmail.com">amrita_34@gmail.com</a><br><br>
+        <p>+91 2569863220</p><br>
+    </div>
+    <div class="box3">
+    <h2>Links</h2><br>
+    <a href="index">Home</a><br><br>
+    <a href="gallery">Gallery</a><br><br>
+    <a href="corner">Student's Corner</a><br><br>
+    <a href="suggestions">Suggestions</a><br><br>
+    <a href="contact">Contact us</a><br><br>
+    <a href="about">About us</a><br><br>
+    
+    </div>
+    
+    <div class="box4">
+    <h2>Newsletter</h2>
+    <form method="POST" action="about">
+       
+      
+        <input type="text" name="name" placeholder="Your name">
+    
+        <input type="email" name="email" placeholder="Email address">
+    
+        <input type="text" name="mobile" placeholder="Mobile number"><br>   
+        <button type="submit">Send</button>
+    </form>
+    
+    </div>
+    </div>
+    <div class="master_box2">
+        <hr>
+        <div class="media">
+    <div class="google">G</div>
+    <div class="x">X</div>
+    <div class="pin">P</div>
+    <div class="faceb">F</div>
+        </div>
+    </div>
+    <p style="text-align: center;color: lightgray;">© All rights reserved</p>
+    </div>
+
+</body>
+<script>
+    const time = document.getElementById("times")
+    setInterval(function(){
+        var d = new Date()
+        let times = d.getDate()
+        console.log(d)
+        time.innerText=d
+    },1000)
+</script>
+</html>
